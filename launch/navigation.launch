@@ -1,0 +1,14 @@
+<launch>
+
+<!--
+    Currently, this is a simple navigation script. This will be augmented with other data to actually make informed decisions, but at this time it literally
+    just says to go forward
+-->
+
+    <node name="navigation" pkg="basic_navigation" type="navigation" output="screen">
+        <param name="~stamped" type="bool" default="false" />
+        <param name="~key_timeout" type="double" default="0.0" />
+        <param name="~frame_id" type="double" default="0.0" />
+        <param name="~repeat_rate" type="double" default="0.0" />
+    </node>
+</launch>

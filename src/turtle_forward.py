@@ -2,13 +2,16 @@
 import rospy
 from geometry_msgs.msg import Twist
 
-def move():
+
+
+def main():
     # Starts a new node
     rospy.init_node('robot_cleaner', anonymous=True)
     velocity_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+
     vel_msg = Twist()
 
-    #Receiveing the user's input
+    # Receiveing the user's input
     print("Let's move your robot")
     speed = input("Input your speed:")
     distance = input("Type your distance:")
@@ -48,5 +51,7 @@ def move():
 if __name__ == '__main__':
     try:
         #Testing our function
-        move()
-    except rospy.ROSInterruptException: pass
+        main()
+
+    except rospy.ROSInterruptException: 
+        pass
